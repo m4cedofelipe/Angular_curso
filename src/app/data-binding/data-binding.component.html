@@ -1,0 +1,126 @@
+<section class="property-binding">
+  <!--
+  <article>
+    <h2>Interpolation / Interpolação</h2>
+
+    <p>String renderizada com interpolação: {{ url }}</p>
+    <p>Resultado de 1 + 1 é: {{ 1 + 1}} </p>
+    <p>Resultado de 1 + 1 não é: {{ 1 + 1 + getValor() }}</p>
+    <p>Curso de Angular e gosto do curso: {{ cursoAngular && getCurtirCurso() }}</p>
+  </article>
+  -->
+
+  <!--
+    <article>
+    <h2>Propoerty-Binding</h2>
+    <img src = "{{ urlImagem }}">
+    <img [src] = "urlImagem">
+  </article>
+  -->
+  
+  <!--
+  <article>
+    <h2>Class Binding e Style Binding</h2>
+
+    <div class="form-group">
+      Selecione uma classe:
+      <select class="form-control" #classe (change)="0">
+        <option value="alert alert-primary">Primary</option>
+        <option value="alert alert-secondary">Secondary</option>
+        <option value="alert alert-success">Success</option>
+        <option value="alert alert-danger">Danger</option>
+        <option value="alert alert-warning">Warning</option>
+        <option value="alert alert-info">Info</option>
+        <option value="alert alert-light">Light</option>
+        <option value="alert alert-dark">Dark</option>
+      </select>
+
+      <br><br>
+
+      <div class="alert {{ classe.value }}" role="alert">
+        Texto colorido conforme valor do combobox.
+      </div>
+
+      <div class="alert" role="alert" 
+      [class.alert-primary]="classe.value == 'alert alert-primary'">
+        A simple primary alert—check it out!
+      </div>
+
+      <div class="alert" role="alert" 
+      [class.alert-secondary]="classe.value == 'alert alert-secondary'">
+        A simple secondary alert—check it out!
+      </div>
+
+      <div class="alert" role="alert" 
+      [class.alert-success]="classe.value == 'alert alert-success'">
+        A simple success alert—check it out!
+      </div>
+
+      <div class="alert" role="alert"
+      [class.alert-danger]="classe.value == 'alert alert-danger'">
+        A simple danger alert—check it out!
+      </div>
+
+      <div class="alert" role="alert"
+      [class.alert-warning]="classe.value == 'alert alert-warning'">
+        A simple warning alert—check it out!
+      </div>
+
+      <div class="alert" role="alert"
+      [class.alert-info]="classe.value == 'alert alert-info'">
+        A simple info alert—check it out!
+      </div>
+
+      <div class="alert" role="alert"
+      [class.alert-light]="classe.value == 'alert alert-light'">
+        A simple light alert—check it out!
+      </div>
+
+      <div class="alert" role="alert"
+      [class.alert-dark]="classe.value == 'alert alert-dark'">
+        A simple dark alert—check it out!
+      </div>
+
+      <div class="alert alert-danger" role="alert"
+        [style.display]="classe.value == 'alert alert-danger' ? 'block' : 'none'">
+        Esse texto somente aparece em caso de erro.
+      </div>      
+    </div>
+  </article>
+</section>
+-->
+
+<section class="event-binding">
+  <article>
+    <h3>Event Binding</h3>
+
+    <div>
+      <button (click)="botaoClicado()"
+      class="btn btn-primary">Me clique</button>
+
+      <br><br>
+
+      <!-- Evento (bl ur) dispara quando um objeto perde o foco-->
+
+      <input type="text"
+      (keyup)="onKeyUp($event)"
+      (keyup.enter)="salvaValor(campoInput.value)"
+      (blur)="salvaValor(campoInput.value)" 
+      #campoInput>
+
+      <p>Valor Atual: {{ valorAtual }}</p>
+      <p>Valor Salvo: {{ valorSalvo }}</p>
+
+      <br>
+       <span
+        (mouseover)="onMouseOverOut()"
+        (mouseout)="onMouseOverOut()"
+        [class.highlight]="isMouseOver"
+        >
+         Passe o mouse sobre mim
+      </span>
+    </div>
+  </article>
+</section>
+
+  
