@@ -20,6 +20,8 @@ export class DataBindingComponent implements OnInit {
 
   nomeDoCurso: String = 'Angular';
 
+  valorInicial = 15;
+
 
   getValor() {
     return 1;
@@ -48,6 +50,11 @@ export class DataBindingComponent implements OnInit {
   atualizaNome(value) {
     this.nome = value;
   }
+
+  onMudouvalor(event) {
+    console.log(event.novoValor);
+  }
+
 
   constructor() { }
 
